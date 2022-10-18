@@ -44,8 +44,6 @@ public class SimpleCharacterMovement : MonoBehaviour
     // uses mouse or keyboard/gamepad
     private enum ControlType { Point, Controllers }
     private ControlType currentControl = ControlType.Point;
-    
-    //private LineRenderer lr;//LineRenderer组件
 
 
     private void Start()

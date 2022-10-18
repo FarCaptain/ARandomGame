@@ -36,7 +36,7 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         canvasGroup.blocksRaycasts = true;
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public virtual void OnPointerEnter(PointerEventData eventData)
     {
         Debug.Log("Index = " + itemIndex);
         Item item = inventory.items[panelIndex][itemIndex];
