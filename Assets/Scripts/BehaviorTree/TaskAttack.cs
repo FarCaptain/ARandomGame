@@ -24,6 +24,8 @@ public class TaskAttack : Node
         {
             target.transform.GetComponent<CharacterBehavior>().Respawn();
             _respawnCounter = 0f;
+            state = NodeState.SUCCESS;
+            return state;
         }
 
         state = NodeState.RUNNING;

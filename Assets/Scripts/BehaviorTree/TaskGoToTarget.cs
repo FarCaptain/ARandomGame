@@ -26,6 +26,8 @@ public class TaskGoToTarget : Node
         else if (_characterMovement.agent.velocity == Vector3.zero)
         {
             _moving = false;
+            state = NodeState.SUCCESS;
+            return state;
         }
 
         state = NodeState.RUNNING;
