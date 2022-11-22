@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b9edec95caa9a418f8a11bf949fac5, type: 3}
   m_Name: InviCookie
   m_EditorClassIdentifier: 
-  name: Coin?
-  description: Coin?
+  name: InvisibilityCookie
+  description: Try a bite! What could possibly be wrong, right?
   icon: {fileID: 21300000, guid: 484abb5ca67cd4b47ab11c893eb47561, type: 3}
   isDefaultItem: 0
   isUsable: 1
