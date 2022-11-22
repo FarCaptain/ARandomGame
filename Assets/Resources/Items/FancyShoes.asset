@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8690ebcf9c0e23e4f9ee0f47a17764b0, type: 3}
+  m_Name: FancyShoes
+  m_EditorClassIdentifier: 
+  name: Fancy Shoes
+  description: 
+  icon: {fileID: 21300000, guid: 4315a462196dd3240a7c1caebea64c5d, type: 3}
+  isDefaultItem: 0
+  isUsable: 1
+  onUseEvent: {fileID: 11400000, guid: d66f228deae515045a3bb6476d6dc5f4, type: 2}
+  typeIndex: 0
+  equipSlot: 3
+  perceptionModifier: 0
+  intelligenceModifier: 0
+  coordinationModifier: 2
+  strengthModifier: 0
