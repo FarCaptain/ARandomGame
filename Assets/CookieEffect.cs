@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DitheringTransparencyController : MonoBehaviour
+public class CookieEffect : MonoBehaviour
 {
     private new SkinnedMeshRenderer renderer;
     public float lowValue = 0.4f;
@@ -18,6 +18,8 @@ public class DitheringTransparencyController : MonoBehaviour
     {
         renderer.material.SetFloat("_Opacity", lowValue);
         duration = _duration;
+
+        gameObject.layer = LayerMask.NameToLayer("Invisable");
     }
 
     private void Update()
@@ -30,6 +32,7 @@ public class DitheringTransparencyController : MonoBehaviour
                 duration = 0f;
                 accumulatedTime = 0f;
                 renderer.material.SetFloat("_Opacity", 1);
+                gameObject.layer = LayerMask.NameToLayer("Player");
             }
         }
     }

@@ -29,4 +29,12 @@ public class GuardBT : Tree
         
         return root;
     }
+
+    public void ClearTarget()
+    {
+        if(_root != null)
+        {
+            _root.ClearData("target");
+        }
+    }
 }
