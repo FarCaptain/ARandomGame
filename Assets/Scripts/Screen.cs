@@ -12,7 +12,7 @@ public class Screen : MonoBehaviour
         Color c = image.color;
         image.color = new Color(c.r, c.g, c.b, 0f);
 
-        InvokeRepeating("fadeScreen", 1, 0.2f);
+        InvokeRepeating("fadeScreen", 12, 0.2f);
     }
 
     void fadeScreen()
