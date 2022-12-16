@@ -12,7 +12,7 @@ public class Generator : MonoBehaviour
     target[] targets;
     target end;
 
-    private void Start()
+    private void OnEnable()
     {
         targets = targetParent.GetComponentsInChildren<target>();
     }
@@ -99,5 +99,45 @@ public class Generator : MonoBehaviour
         pos -= dir;
         //Destroy(mark.gameObject);
         return false;
+    }
+
+    private void OnValidate()
+    {
+        //if (targetParent == null)
+        //    targetParent = GameObject.Find("TargetsPanel").transform;
+
+        //targets = targetParent.GetComponentsInChildren<target>();
+
+        //if (targets.Length <= 0)
+        //    return;
+
+        ////give index according to child index
+        ////up
+        //for (int i = 0; i < 5; i++)
+        //{
+        //    targets[i].dir = new Vector2Int(0, 1);
+        //    targets[i].cord = new Vector2Int(i % 5, 4);
+        //}
+
+        ////down
+        //for (int i = 5; i < 10; i++)
+        //{
+        //    targets[i].dir = new Vector2Int(0, -1);
+        //    targets[i].cord = new Vector2Int(i % 5, 0);
+        //}
+
+        ////right
+        //for (int i = 10; i < 15; i++)
+        //{
+        //    targets[i].dir = new Vector2Int(1, 0);
+        //    targets[i].cord = new Vector2Int(4, i % 5);
+        //}
+
+        //// left
+        //for (int i = 15; i < 20; i++)
+        //{
+        //    targets[i].dir = new Vector2Int(-1, 0);
+        //    targets[i].cord = new Vector2Int(0, i % 5);
+        //}
     }
 }

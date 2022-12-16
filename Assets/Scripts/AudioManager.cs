@@ -49,8 +49,6 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
-
-    //this addition to the code was made by me, the rest was from Brackeys tutorial
     public void Stop(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -61,5 +59,13 @@ public class AudioManager : MonoBehaviour
         }
 
         s.source.Stop();
+    }
+
+    public void StopAll()
+    {
+        foreach (Sound s in sounds)
+        {
+            s.source.Stop();
+        }
     }
 }
