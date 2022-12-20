@@ -5808,7 +5808,7 @@ GameObject:
   - component: {fileID: 160006643}
   - component: {fileID: 160006645}
   m_Layer: 0
-  m_Name: Camera (1)
+  m_Name: InArcadeCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5840,8 +5840,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 10
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -6804,8 +6804,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 7636663
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &193197183
 RectTransform:
@@ -6841,7 +6841,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef7e2963c7eddb04c9f1e13098bd3c61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loaderCanvas: {fileID: 1843942935}
+  canvas: {fileID: 193197182}
+  loaderPanel: {fileID: 1843942935}
   prograssBar: {fileID: 592155639}
 --- !u!1001 &194782649
 PrefabInstance:
@@ -12033,6 +12034,7 @@ GameObject:
   - component: {fileID: 365439355}
   - component: {fileID: 365439354}
   - component: {fileID: 365439353}
+  - component: {fileID: 365439358}
   m_Layer: 0
   m_Name: ScreenTrigger
   m_TagString: Untagged
@@ -12057,9 +12059,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 193197184}
-          m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-          m_MethodName: LoadScene
+        - m_Target: {fileID: 365439358}
+          m_TargetAssemblyTypeName: GoToLevel, Assembly-CSharp
+          m_MethodName: GoTo
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -12068,18 +12070,6 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: Reflect
             m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 2040742918}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
           m_CallState: 2
 --- !u!65 &365439354
 BoxCollider:
@@ -12159,6 +12149,18 @@ Transform:
   m_Father: {fileID: 1836110174}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9}
+--- !u!114 &365439358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365439352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b563f1fd7477c8d4caa40ad56c54170a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &366493524 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 98d33669ab6e07c408cb13d978172097, type: 3}
@@ -12621,6 +12623,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98d33669ab6e07c408cb13d978172097, type: 3}
+--- !u!1 &373387396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 373387398}
+  - component: {fileID: 373387397}
+  m_Layer: 0
+  m_Name: SceneThemeSongSwitch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &373387397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373387396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53fc5f1b723e1cf4498d9d58281cd05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  themeName: Theme
+--- !u!4 &373387398
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373387396}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.183693, y: -5.8083534, z: 0.11141205}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &376362909 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 98d33669ab6e07c408cb13d978172097, type: 3}

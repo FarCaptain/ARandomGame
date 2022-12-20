@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -7,7 +8,8 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] private GameObject loaderCanvas;
+    [SerializeField] private Canvas canvas;
+    [SerializeField] private GameObject loaderPanel;
     [SerializeField] private Image prograssBar;
     private float target;
 
@@ -29,6 +31,24 @@ public class LevelManager : MonoBehaviour
     }
     #endregion
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += RetrieveInArcadeCamera;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= RetrieveInArcadeCamera;
+    }
+
+    private void RetrieveInArcadeCamera(Scene scene, LoadSceneMode mode)
+    {
+        if(canvas.worldCamera == null)
+        {
+            canvas.worldCamera = GameObject.Find("InArcadeCamera").GetComponent<Camera>();
+        }
+    }
+
     public async void LoadScene(string sceneName)
     {
         target = 0f;
@@ -37,7 +57,7 @@ public class LevelManager : MonoBehaviour
         var scene = SceneManager.LoadSceneAsync(sceneName);
         scene.allowSceneActivation = false;
 
-        loaderCanvas.SetActive(true);
+        loaderPanel.SetActive(true);
 
         do
         {
@@ -46,7 +66,7 @@ public class LevelManager : MonoBehaviour
         } while (prograssBar.fillAmount < 0.9f);
 
         scene.allowSceneActivation = true;
-        loaderCanvas.SetActive(false);
+        loaderPanel.SetActive(false);
     }
 
     private void Update()
