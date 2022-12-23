@@ -14,6 +14,8 @@ public class InventoryEquipmentSlot : InventorySlot
         base.Start();
         equipmentManager = EquipmentManager.instance;
         equipmentManager.onEquipmentChanged += UpdateSlot;
+
+        RefreshSlotUI();
     }
 
     public override void OnDrop(PointerEventData eventData)
@@ -44,5 +46,11 @@ public class InventoryEquipmentSlot : InventorySlot
     public void UnequipItem()
     {
         equipmentManager.Unequip((int)slotType);
+    }
+
+    public void RefreshSlotUI()
+    {
+        ClearSlot();
+        equipmentManager.RefreshEquipmentUI();
     }
 }

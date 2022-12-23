@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] private Canvas canvas;
     [SerializeField] private GameObject loaderPanel;
+    [SerializeField] private GameObject clickStartPanel;
     [SerializeField] private Image prograssBar;
     private float target;
 
@@ -68,6 +69,9 @@ public class LevelManager : MonoBehaviour
         scene.allowSceneActivation = true;
         loaderPanel.SetActive(false);
     }
+
+    public void ShowClickStartPanel() => clickStartPanel.SetActive(true);
+    public void HiddeClickStartPanel() => clickStartPanel.SetActive(false);
 
     private void Update()
     {

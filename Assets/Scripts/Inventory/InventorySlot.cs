@@ -19,6 +19,14 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         panelIndex = transform.parent.GetSiblingIndex();
     }
 
+    private void Update()
+    {
+        if(icon == null)
+        {
+            Debug.Log("WTF");
+        }
+    }
+
     public virtual void OnDrop(PointerEventData eventData)
     {
         if(RectTransformUtility.RectangleContainsScreenPoint(slotTransform, Input.mousePosition))

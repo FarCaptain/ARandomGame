@@ -12,10 +12,17 @@ public class InventoryUI : MonoBehaviour
     private Transform[] itemParents;
     public GameObject inventoryUI;
 
+    private void OnDestroy()
+    {
+        Inventory.instance.onItemChangedCallback -= UpdateUI;
+    }
+
     void Start()
     {
+        // Hey this is the intialization problem
         inventory = Inventory.instance;
         inventory.onItemChangedCallback += UpdateUI;
+
         numberOfItemTypes = System.Enum.GetNames(typeof(ItemType)).Length;
 
         //itemParents = PanelParent.
@@ -52,9 +59,4 @@ public class InventoryUI : MonoBehaviour
             }
         }
 }
-
-    private void OnDestroy()
-    {
-        inventory.onItemChangedCallback -= UpdateUI;
-    }
 }

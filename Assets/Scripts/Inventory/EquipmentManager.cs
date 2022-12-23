@@ -94,4 +94,15 @@ public class EquipmentManager : MonoBehaviour
         
         return false;
     }
+
+    public void RefreshEquipmentUI()
+    {
+        for (int i = 0; i < currentEquipments.Length; i++)
+        {
+            if(currentEquipments[i] != null)
+            {
+                onEquipmentChanged?.Invoke(currentEquipments[i], null);
+            }
+        }
+    }
 }
