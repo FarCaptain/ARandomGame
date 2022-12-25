@@ -10,10 +10,6 @@ public class LoadStartSceneData : MonoBehaviour
     public Transform player;
     public UnityEvent OnArcadeClicked;
 
-    public List<GameObject> inGameObjects;
-    public List<bool> ifExist;
-    public List<Vector3> inGamePositions;
-
     private void OnEnable()
     {
         LoadData();
@@ -37,14 +33,5 @@ public class LoadStartSceneData : MonoBehaviour
 
         // this is not right but only when clicked can we switch scenes
         startData.arcadeClicked = true;
-    }
-
-    private void InitData()
-    {
-        for (int i = 0; i < inGameObjects.Count; i++)
-        {
-            
-            ifExist[i] = true;
-        }
     }
 }
