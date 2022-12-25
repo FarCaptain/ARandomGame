@@ -156,7 +156,7 @@ public class SimpleCharacterMovement : MonoBehaviour
         {
             transform.rotation = focus.interactionTransform.rotation;
             // use Radius or use position
-            //focus.Interact();
+            focus.Interact();
             focus = null;
 
             //ToDo.Block the input

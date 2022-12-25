@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcea9481268de274883051e030139561, type: 3}
+  m_Name: Turtle
+  m_EditorClassIdentifier: 
+  sentences:
+  - 
+  - Howdy! I'm Jack the flying turtle!
+  - What do you mean by why I can fly? I'm a turtle.
+  - Anyways, kiddo, if you were to go through that portal, this might be helpful
+    to you...
+  - There is a cookie under the flower tree near the portal, which might come in
+    handy when you come across that pesky ostrich later - that dude won't listen
+    to you whatsoever.
+  - But don't use it just yet; you want to keep it till you meet him. The cookie
+    is a powerful item, but so is it disposable. And whatever magic it granted, it
+    won't last for long.
+  - Mark my words, and good luck. Remember, there is no coming back once you entered
+    the portal!
+  postDialogueEvent: {fileID: 11400000, guid: 3ccb07abd24ffdb46ad90eb1ba68e93b, type: 2}

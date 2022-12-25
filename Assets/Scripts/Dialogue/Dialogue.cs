@@ -7,4 +7,6 @@ public class Dialogue : ScriptableObject
 {
     [TextArea]
     public List<string> sentences;
+
+    public Sphinx.GameEvent postDialogueEvent;
 }

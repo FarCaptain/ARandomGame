@@ -40,6 +40,9 @@ public class DialogueDisplay : MonoBehaviour
     {
         continueButton.onClick.RemoveAllListeners();
         dialogueCanvas.SetActive(false);
+
+        if (dialogue.postDialogueEvent != null)
+            dialogue.postDialogueEvent.Raise();
     }
 
     public void NextSentence()

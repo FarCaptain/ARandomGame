@@ -35,6 +35,8 @@ public class InventoryUI : MonoBehaviour
             InventorySlot[] temp = itemParents[i].GetComponentsInChildren<InventorySlot>();
             slots.Add(temp);
         }
+
+        UpdateUI();
     }
 
     // Update is called once per frame
@@ -58,5 +60,5 @@ public class InventoryUI : MonoBehaviour
                 slots[i][j].AddItem(inventory.items[i][j]);
             }
         }
-}
+    }
 }
