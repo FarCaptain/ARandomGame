@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcea9481268de274883051e030139561, type: 3}
+  m_Name: Deer
+  m_EditorClassIdentifier: 
+  sentences:
+  - 
+  - Oh Hi there!
+  - I am Wendy the Reindeer! What's your name?
+  - Not much of a talker, are you? Neither am I, you know. I feel like we can get
+    along.
