@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76aa0797c97089344a0076c5135ac277, type: 3}
   m_Name: TestData
   m_EditorClassIdentifier: 
-  load: 1
+  load: 0
   playerPosition: {x: 8.665997, y: 1.15, z: -1.7798648}
   arcadeClicked: 1
