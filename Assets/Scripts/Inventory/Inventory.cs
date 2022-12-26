@@ -96,4 +96,14 @@ public class Inventory : MonoBehaviour
         if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
     }
+
+    private void Update()
+    {
+        if(draggedObjectParent == null)
+        {
+            var obj = GameObject.Find("Inventory").transform;
+            if (obj != null)
+                draggedObjectParent = obj;
+        }
+    }
 }

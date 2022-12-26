@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
-using UnityEditorInternal;
+//using System.Runtime.CompilerServices;
+//using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 

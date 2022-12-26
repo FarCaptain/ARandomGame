@@ -20,8 +20,9 @@ MonoBehaviour:
     along.
   - Anyway, you HAVE to try the arcade machine. I've spent hours on that today. See?
     The machine is over there. Oh hi, Mr. Crow!
-  - Where were we? The game, yes... It is about reflection, I think. There is a flashlight
-    shooting a light beam. There are those mirrors. And suddenly, they are gone.
-    But you have to memorize them. And there are those red dots that you can click...
-    to give your answer. Anyway, you will get it once you try.
+  - 'Where were we? The game, yes... It is about the law of reflection, I think.
+    There is a flashlight shooting a light beam. '
+  - 'There are those mirrors. And suddenly, they are gone. But you have to memorize
+    them. And there are those red dots that you can click... to give your answer. '
+  - Anyway, you will get it once you try.
   postDialogueEvent: {fileID: 0}
