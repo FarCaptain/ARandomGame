@@ -20,9 +20,8 @@ MonoBehaviour:
   - There is a cookie under the flower tree near the portal, which might come in
     handy when you come across that pesky ostrich later - that dude won't listen
     to you whatsoever.
-  - But don't use it just yet; you want to keep it till you meet him. The cookie
-    is a powerful item, but so is it disposable. And whatever magic it granted, it
-    won't last for long.
+  - But don't use it just yet. The cookie is a powerful item, but it is also dangerous.
+    Don't rely on it. And whatever magic it granted, it won't last for long.
   - Mark my words, and good luck. Remember, there is no coming back once you entered
     the portal!
   postDialogueEvent: {fileID: 11400000, guid: 3ccb07abd24ffdb46ad90eb1ba68e93b, type: 2}
