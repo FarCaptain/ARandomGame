@@ -7423,6 +7423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 743892421}
   - component: {fileID: 743892422}
+  - component: {fileID: 743892423}
   m_Layer: 0
   m_Name: IsoCam
   m_TagString: Untagged
@@ -7484,6 +7485,18 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 2053057669}
+--- !u!114 &743892423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743892420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b8a3f9bed5c7564a814458a5479eae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &750811999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9905,6 +9918,18 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CameraShake, Assembly-CSharp
+        m_MethodName: ShakeCamera
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1058443632}
         m_TargetAssemblyTypeName: DialogueDisplay, Assembly-CSharp
         m_MethodName: StartConversation
@@ -21536,6 +21561,7 @@ GameObject:
   - component: {fileID: 2053057669}
   - component: {fileID: 2053057671}
   - component: {fileID: 2053057670}
+  - component: {fileID: 2053057672}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -21613,6 +21639,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2053057672
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053057668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 1.6
+  mNoiseOffsets: {x: 31.474731, y: 786.3381, z: -85.612915}
 --- !u!1001 &2059540068
 PrefabInstance:
   m_ObjectHideFlags: 0
